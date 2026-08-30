@@ -1,28 +1,16 @@
-/* ==========================================================================
-   Dr. Lucas Moreira — Landing Page
-   Vanilla JavaScript — sem dependências externas
-   ========================================================================== */
-
 (() => {
   'use strict';
-
-  /* ---------- 1. Configuração central ----------
-     Altere os valores abaixo para atualizar contato e textos em todo o site
-     sem precisar mexer no HTML. */
   const CONFIG = {
-    whatsappNumber: '5571900000000', // formato: 55 + DDD + número, somente dígitos
+    whatsappNumber: '5571900000000',
     whatsappMessage: 'Olá, Dr. Lucas! Gostaria de agendar uma consulta.',
   };
 
-  /* Monta o link de WhatsApp e aplica em todos os elementos [data-whatsapp-cta] */
   function setupWhatsappLinks() {
     const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(CONFIG.whatsappMessage)}`;
     document.querySelectorAll('[data-whatsapp-cta]').forEach((el) => {
       el.setAttribute('href', url);
     });
   }
-
-  /* ---------- 2. Menu mobile ---------- */
   function setupMobileNav() {
     const toggle = document.getElementById('navToggle');
     const nav = document.getElementById('mainNav');
@@ -38,18 +26,15 @@
       toggle.setAttribute('aria-expanded', String(isOpen));
     });
 
-    // Fecha o menu ao clicar em um link
     nav.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', closeNav);
     });
 
-    // Fecha com a tecla Esc
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeNav();
     });
   }
 
-  /* ---------- 3. Header com sombra ao rolar ---------- */
   function setupHeaderScroll() {
     const header = document.querySelector('.site-header');
     if (!header) return;
@@ -61,7 +46,6 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
-  /* ---------- 4. Fade-in ao rolar (Intersection Observer) ---------- */
   function setupScrollReveal() {
     const items = document.querySelectorAll('[data-reveal]');
     if (!items.length) return;
@@ -86,7 +70,6 @@
     items.forEach((el) => observer.observe(el));
   }
 
-  /* ---------- 5. Slider de depoimentos ---------- */
   function setupTestimonialsSlider() {
     const track = document.getElementById('testimonialsTrack');
     const prevBtn = document.getElementById('reviewPrev');
@@ -105,13 +88,11 @@
     nextBtn.addEventListener('click', () => scrollByCard(1));
   }
 
-  /* ---------- 6. Ano atual no rodapé ---------- */
   function setupFooterYear() {
     const yearEl = document.getElementById('anoAtual');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 
-  /* ---------- Inicialização ---------- */
   document.addEventListener('DOMContentLoaded', () => {
     setupWhatsappLinks();
     setupMobileNav();
