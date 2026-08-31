@@ -16,21 +16,24 @@
 
   <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
 
-  <header class="site-header" id="topo">
-    <div class="header-inner container">
-      <a class="brand" href="#inicio">
-        <span class="brand-name"><em>Dr. Lucas Moreira</em></span>
-        <span class="brand-tag">Dor &middot; Geriatria &middot; Acupuntura</span>
+  <header class="header site-header" id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="nav-brand">
+        <img src="logo-lm.png" alt="Logo Dr Lucas Moreira">
+        <div class="brand-text">
+            <span class="text-gradient"><strong><em>Dr. Lucas Moreira</em></strong></span>
+            <span class="especialidade">Especialista em Dor &middot; Geriatria</span>
+        </div>
       </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
         <ul>
-          <li><a href="#especialidades" class="nav-link">Especialidades</a></li>
-          <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
-          <li><a href="#convenios" class="nav-link">Convênios</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#procedimentos" class="nav-link">Procedimentos</a></li>
+          <li><a href="#galeria" class="nav-link">Galeria</a></li>
           <li><a href="#locais" class="nav-link">Locais</a></li>
         </ul>
-        <a class="btn btn-primary btn-sm nav-cta" data-whatsapp-cta target="_blank" rel="noopener">Agendar Consulta</a>
+        <a href="#locais" class="btn btn-primary btn-sm nav-cta">Agendar Consulta</a>
       </nav>
 
       <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menu de navegação">
@@ -93,70 +96,284 @@
           </p>
 
           <div class="hero-actions" data-reveal>
-            <a class="btn btn-primary" data-whatsapp-cta target="_blank" rel="noopener">
+            <a href="#locais" class="btn btn-primary" >
               Agendar Consulta
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <a class="btn btn-ghost" href="#especialidades">Conhecer as especialidades</a>
+            <a class="btn btn-ghost" href="#procedimentos">Conhecer os procedimentos</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="specialties" id="especialidades">
+    <section class="about" id="sobre">
+      <div class="container about-grid">
+        <figure class="about-figure" data-reveal>
+          <div class="about-photo-frame">
+            <img src="Lucas-Consul1.jpg" alt="Dr. Lucas Moreira em seu consultório" loading="lazy" width="560" height="680">
+          </div>
+          <figcaption class="about-badge">CRM-BA 23629</figcaption>
+        </figure>
+
+        <div class="about-content">
+          <p class="eyebrow" data-reveal>Quem cuida</p>
+          <h2 data-reveal>Sobre o <em>Dr. Lucas Moreira</em></h2>
+
+          <div class="about-text" data-reveal>
+            <p>O Dr. Lucas Moreira é médico com atuação dedicada à Geriatria e à Medicina da Dor, unindo o rigor técnico dessas duas especialidades à sensibilidade de quem entende que cada paciente carrega uma história única.</p>
+            <p>Ao longo da carreira, aproximou-se da Acupuntura como recurso terapêutico complementar — hoje reconhecida como especialidade pelo Conselho Federal de Medicina — e passou a integrá-la ao cuidado de pacientes que convivem com dor crônica ou buscam um envelhecimento mais saudável.</p>
+            <p>Mais do que tratar sintomas isoladamente, o consultório foi pensado para acolher: um espaço onde o paciente é ouvido com atenção antes de qualquer decisão clínica, e onde o plano de tratamento é construído em conjunto, respeitando o tempo e a realidade de cada pessoa.</p>
+          </div>
+
+          <ul class="about-pillars" data-reveal>
+            <li>Escuta ativa em cada consulta</li>
+            <li>Tratamento individualizado</li>
+            <li>Geriatria, Dor e Acupuntura em um só cuidado</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="procedures" id="procedimentos">
       <div class="container">
         <div class="section-head" data-reveal>
           <p class="eyebrow">Atuação clínica</p>
-          <h2>Especialidades e foco de cuidado</h2>
-          <p class="section-lead">Duas frentes de tratamento que se complementam: o cuidado clínico do envelhecimento e o alívio da dor pelas vias da Acupuntura.</p>
+          <h2>Procedimentos e áreas de cuidado</h2>
+          <p class="section-lead">Cada card traz uma explicação aprofundada sobre a técnica, suas indicações e o que esperar do atendimento. Toque para saber mais.</p>
         </div>
 
-        <div class="specialty-grid">
-          <article class="specialty-card" data-reveal>
-            <div class="specialty-media">
-              <img src="Lucas-Ac.jpg" alt="Atendimento médico" loading="lazy">
-            </div>
-            <div class="specialty-body">
-              <span class="specialty-icon" aria-hidden="true">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.5C.86 9.1 2.1 5.5 5.6 4.7 8 4.15 10 5.3 12 7.5c2-2.2 4-3.35 6.4-2.8 3.5.8 4.74 4.4 3.1 7.8C19 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-              </span>
-              <h3>Geriatria</h3>
-              <p>Acompanhamento clínico completo para um envelhecimento saudável, com atenção à independência e à qualidade de vida.</p>
-              <ul class="specialty-list">
-                <li>Envelhecimento saudável</li>
-                <li>Distúrbios de mobilidade</li>
-                <li>Saúde osteomuscular</li>
-                <li>Sarcopenia</li>
-              </ul>
-            </div>
-          </article>
+        <div class="procedures-grid" data-reveal>
 
-          <article class="specialty-card specialty-card--alt" data-reveal>
-            <div class="specialty-media">
-              <img src="Lucas-Ac4.jpg" alt="Sessão de acupuntura" loading="lazy">
-            </div>
-            <div class="specialty-body">
-              <span class="specialty-icon" aria-hidden="true">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M4 12l4-4M4 12l4 4M20 12l-4-4M20 12l-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              <h3>Dor e Acupuntura</h3>
-              <p>Tratamento da dor crônica e aguda com técnicas de acupuntura e bloqueios, de forma individualizada.</p>
-              <ul class="specialty-list">
-                <li>Tratamento da dor</li>
-                <li>Acupuntura</li>
-                <li>Bloqueios</li>
-              </ul>
-            </div>
-          </article>
+          <button type="button" class="procedure-card procedure-card--feature" data-modal-target="geriatria" aria-haspopup="dialog">
+            <span class="procedure-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.5C.86 9.1 2.1 5.5 5.6 4.7 8 4.15 10 5.3 12 7.5c2-2.2 4-3.35 6.4-2.8 3.5.8 4.74 4.4 3.1 7.8C19 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="procedure-body">
+              <span class="procedure-title">Geriatria</span>
+              <span class="procedure-teaser">Acompanhamento clínico dedicado à saúde do idoso, com foco em autonomia e qualidade de vida.</span>
+            </span>
+            <span class="procedure-cta">Saiba mais
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+
+          <button type="button" class="procedure-card" data-modal-target="dor" aria-haspopup="dialog">
+            <span class="procedure-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="2.3" fill="currentColor"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <span class="procedure-body">
+              <span class="procedure-title">Medicina da Dor<br>com bloqueios anestésicos</span>
+              <span class="procedure-teaser">Manejo especializado da dor aguda e crônica com bloqueios guiados por técnica precisa.</span>
+            </span>
+            <span class="procedure-cta">Saiba mais
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+
+          <button type="button" class="procedure-card" data-modal-target="hialuronico" aria-haspopup="dialog">
+            <span class="procedure-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3C12 3 6 11 6 15a6 6 0 0 0 12 0c0-4-6-12-6-12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="procedure-body">
+              <span class="procedure-title">Infiltração com<br>ácido hialurônico</span>
+              <span class="procedure-teaser">Indicada para o manejo da dor e melhora da função em articulações comprometidas.</span>
+            </span>
+            <span class="procedure-cta">Saiba mais
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+
+          <button type="button" class="procedure-card" data-modal-target="ultrassom" aria-haspopup="dialog">
+            <span class="procedure-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="17" r="1.6" fill="currentColor"/><path d="M8.5 13.5a5 5 0 0 1 7 0M6 11a8.5 8.5 0 0 1 12 0M9.5 15.8a3 3 0 0 1 5 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <span class="procedure-body">
+              <span class="procedure-title">Bloqueio guiado<br>por ultrassom</span>
+              <span class="procedure-teaser">Maior precisão na localização de nervos e estruturas-alvo, guiado por imagem em tempo real.</span>
+            </span>
+            <span class="procedure-cta">Saiba mais
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+
+          <button type="button" class="procedure-card" data-modal-target="acupuntura" aria-haspopup="dialog">
+            <span class="procedure-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="7" cy="6" r="1.8" stroke="currentColor" stroke-width="1.5"/><path d="M8.5 7.5L18 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15.5 19.5l2 2M17.5 17.5l2 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </span>
+            <span class="procedure-body">
+              <span class="procedure-title">Acupuntura</span>
+              <span class="procedure-teaser">Técnica médica reconhecida pelo CFM, utilizada como recurso complementar no tratamento da dor.</span>
+            </span>
+            <span class="procedure-cta">Saiba mais
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+
         </div>
       </div>
+
+      <dialog id="modal-geriatria" class="procedure-modal" aria-labelledby="modal-geriatria-title">
+        <button type="button" class="modal-close" data-close-modal aria-label="Fechar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <span class="modal-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.5C.86 9.1 2.1 5.5 5.6 4.7 8 4.15 10 5.3 12 7.5c2-2.2 4-3.35 6.4-2.8 3.5.8 4.74 4.4 3.1 7.8C19 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 id="modal-geriatria-title">Geriatria</h3>
+        <p class="modal-lead">A Geriatria cuida da saúde do idoso de forma ampla, considerando não apenas doenças isoladas, mas o funcionamento do corpo como um todo — mobilidade, memória, sono, nutrição e autonomia para as atividades do dia a dia.</p>
+        <p class="modal-subhead">O acompanhamento inclui</p>
+        <ul class="modal-list">
+          <li>Avaliação geriátrica ampla</li>
+          <li>Manejo de doenças crônicas e revisão de medicações em uso</li>
+          <li>Prevenção de quedas e de perda de força muscular (sarcopenia)</li>
+          <li>Orientação à família e a cuidadores</li>
+        </ul>
+        <p class="modal-note">O acompanhamento é construído de forma individualizada, respeitando o ritmo e as necessidades clínicas de cada paciente.</p>
+        <a href="#locais" class="btn btn-primary btn-sm" data-close-modal>Agendar consulta</a>
+      </dialog>
+
+      <dialog id="modal-dor" class="procedure-modal" aria-labelledby="modal-dor-title">
+        <button type="button" class="modal-close" data-close-modal aria-label="Fechar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <span class="modal-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="2.3" fill="currentColor"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </span>
+        <h3 id="modal-dor-title">Medicina da Dor com bloqueios anestésicos</h3>
+        <p class="modal-lead">Bloqueios anestésicos consistem na aplicação de medicação — anestésico local, por vezes associado a outros fármacos — próximo a nervos ou estruturas específicas, com o objetivo de interromper temporariamente a transmissão do estímulo doloroso.</p>
+        <p class="modal-subhead">Indicado para</p>
+        <ul class="modal-list">
+          <li>Dor neuropática</li>
+          <li>Dor miofascial</li>
+          <li>Dor articular localizada</li>
+          <li>Quadros que não responderam bem a tratamentos convencionais</li>
+        </ul>
+        <p class="modal-note">Cada protocolo é definido após avaliação clínica detalhada, considerando a origem e as características da dor de cada paciente.</p>
+        <a href="#locais" class="btn btn-primary btn-sm" data-close-modal>Agendar consulta</a>
+      </dialog>
+
+      <dialog id="modal-hialuronico" class="procedure-modal" aria-labelledby="modal-hialuronico-title">
+        <button type="button" class="modal-close" data-close-modal aria-label="Fechar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <span class="modal-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3C12 3 6 11 6 15a6 6 0 0 0 12 0c0-4-6-12-6-12Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 id="modal-hialuronico-title">Infiltração com ácido hialurônico</h3>
+        <p class="modal-lead">O ácido hialurônico é um componente natural do líquido sinovial, responsável por lubrificar e amortecer as articulações. Na infiltração (viscossuplementação), ele é aplicado diretamente na articulação — mais comumente o joelho — para auxiliar pacientes com desgaste articular.</p>
+        <p class="modal-subhead">Indicado para</p>
+        <ul class="modal-list">
+          <li>Dor articular relacionada à osteoartrose</li>
+          <li>Pacientes que buscam alternativa ao uso contínuo de anti-inflamatórios</li>
+        </ul>
+        <p class="modal-note">Os resultados variam conforme o grau de desgaste articular e as características de cada paciente, sendo avaliados individualmente na consulta.</p>
+        <a href="#locais" class="btn btn-primary btn-sm" data-close-modal>Agendar consulta</a>
+      </dialog>
+
+      <dialog id="modal-ultrassom" class="procedure-modal" aria-labelledby="modal-ultrassom-title">
+        <button type="button" class="modal-close" data-close-modal aria-label="Fechar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <span class="modal-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="17" r="1.6" fill="currentColor"/><path d="M8.5 13.5a5 5 0 0 1 7 0M6 11a8.5 8.5 0 0 1 12 0M9.5 15.8a3 3 0 0 1 5 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </span>
+        <h3 id="modal-ultrassom-title">Bloqueio guiado por ultrassom</h3>
+        <p class="modal-lead">A ultrassonografia permite visualizar em tempo real nervos, músculos, tendões e articulações durante o procedimento, guiando a agulha com maior precisão até a estrutura desejada.</p>
+        <p class="modal-subhead">Benefícios da técnica</p>
+        <ul class="modal-list">
+          <li>Maior exatidão na localização do alvo</li>
+          <li>Procedimento acompanhado passo a passo pela imagem</li>
+          <li>Abordagem personalizada para cada estrutura anatômica</li>
+        </ul>
+        <p class="modal-note">É uma técnica utilizada em diferentes tipos de bloqueio, sempre indicada conforme a avaliação clínica de cada caso.</p>
+        <a href="#locais" class="btn btn-primary btn-sm" data-close-modal>Agendar consulta</a>
+      </dialog>
+
+      <dialog id="modal-acupuntura" class="procedure-modal" aria-labelledby="modal-acupuntura-title">
+        <button type="button" class="modal-close" data-close-modal aria-label="Fechar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <span class="modal-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="7" cy="6" r="1.8" stroke="currentColor" stroke-width="1.5"/><path d="M8.5 7.5L18 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15.5 19.5l2 2M17.5 17.5l2 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </span>
+        <h3 id="modal-acupuntura-title">Acupuntura</h3>
+        <p class="modal-lead">A Acupuntura é uma especialidade médica reconhecida pelo Conselho Federal de Medicina (CFM), que utiliza a inserção de agulhas finas em pontos específicos do corpo para estimular respostas naturais de regulação e alívio da dor.</p>
+        <p class="modal-subhead">Indicações comuns</p>
+        <ul class="modal-list">
+          <li>Dores osteomusculares</li>
+          <li>Enxaqueca e cefaleias</li>
+          <li>Ansiedade associada a quadros dolorosos</li>
+          <li>Apoio complementar em tratamentos geriátricos</li>
+        </ul>
+        <p class="modal-note">O número de sessões varia de acordo com a condição tratada e é definido ao longo do acompanhamento clínico.</p>
+        <a href="#locais" class="btn btn-primary btn-sm" data-close-modal>Agendar consulta</a>
+      </dialog>
+    </section>
+
+    <section class="gallery" id="galeria">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Bastidores do cuidado</p>
+          <h2>Galeria de procedimentos</h2>
+          <p class="section-lead">Registros reais do consultório, para que você conheça o ambiente e a técnica antes mesmo da primeira consulta.</p>
+        </div>
+
+        <div class="gallery-grid" data-reveal>
+          <button type="button" class="gallery-item gallery-item--wide" data-caption="Aplicação de acupuntura durante o atendimento">
+            <img src="Lucas-Ac4.jpg" alt="Dr. Lucas Moreira realizando procedimento de acupuntura" loading="lazy">
+            <span class="gallery-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+
+          <button type="button" class="gallery-item" data-caption="Preparo para sessão de acupuntura">
+            <img src="Lucas-Ac.jpg" alt="Preparo para sessão de acupuntura" loading="lazy">
+            <span class="gallery-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+
+          <button type="button" class="gallery-item gallery-item--tall" data-caption="Sessão de acupuntura em andamento">
+            <img src="Lucas-Ac3.jpg" alt="Sessão de acupuntura em andamento no consultório" loading="lazy">
+            <span class="gallery-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+
+          <button type="button" class="gallery-item" data-caption="Posicionamento de agulhas com técnica precisa">
+            <img src="Lucas-Ac2.jpg" alt="Posicionamento de agulhas de acupuntura" loading="lazy">
+            <span class="gallery-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+
+          <button type="button" class="gallery-item" data-caption="Procedimento realizado com atenção aos detalhes">
+            <img src="Lucas-Ac5.jpg" alt="Procedimento de acupuntura em detalhe" loading="lazy">
+            <span class="gallery-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+
+          <button type="button" class="gallery-item" data-caption="Dr. Lucas Moreira no consultório">
+            <img src="Lucas-Consul.jpg" alt="Dr. Lucas Moreira em atendimento no consultório" loading="lazy">
+            <span class="gallery-overlay"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 3H3v6M15 3h6v6M21 15v6h-6M3 15v6h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </button>
+        </div>
+      </div>
+
+      <dialog class="lightbox" id="lightbox" aria-label="Visualização ampliada da imagem">
+        <button type="button" class="modal-close lightbox-close" data-close-modal aria-label="Fechar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Imagem anterior">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <figure class="lightbox-figure">
+          <img id="lightboxImage" src="" alt="">
+          <figcaption id="lightboxCaption"></figcaption>
+        </figure>
+        <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Próxima imagem">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <p class="lightbox-counter" id="lightboxCounter" aria-hidden="true"></p>
+      </dialog>
     </section>
 
     <section class="testimonials" id="depoimentos">
       <div class="container">
         <div class="section-head" data-reveal>
           <p class="eyebrow">Depoimentos</p>
-          <h2>O que dizem os pacientes</h2>
+          <h2></h2>
         </div>
       </div>
 
@@ -208,19 +425,21 @@
         </div>
       </div>
 
-      <p class="testimonials-note container">Sua avaliação é muito importante. Compartilhe sua experiência com Dr Lucas no Google.</p>
+      <p class="testimonials-note container">Deixe você também sua experiência no Goolge</p>
     </section>
 
     <section class="insurance" id="convenios">
       <div class="container">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">Convênios</p>
-          <h2>Planos de saúde atendidos</h2>
+          <p class="eyebrow">Formas de Atendimento</p>
+          <h2>Como cuido de você</h2>
+          <p class="section-lead">Atendimento com transparência e flexibilidade. Confira as modalidades para cada área de atuação clínica:</p>
         </div>
-
+    
         <div class="insurance-grid">
-          <div class="insurance-col" data-reveal>
-            <h3>Dor &amp; Acupuntura</h3>
+          <div class="insurance-col glass-card" data-reveal>
+            <h3 class="gold-text">Dor &amp; Acupuntura</h3>
+            <p class="insurance-desc">Atendemos uma ampla rede de convênios parceiros para facilitar o seu tratamento:</p>
             <ul class="chip-list">
               <li>Bradesco Saúde</li>
               <li>Unimed</li>
@@ -231,58 +450,117 @@
               <li>GEAP</li>
             </ul>
           </div>
-
-          <div class="insurance-col" data-reveal>
-            <h3>Geriatria</h3>
+    
+          <div class="insurance-col glass-card" data-reveal>
+            <h3 class="gold-text">Geriatria</h3>
+            <p class="insurance-desc">Consultas com tempo, dedicação e exclusividade para a saúde do idoso:</p>
             <ul class="chip-list">
-              <li>Particular</li>
+              <li class="chip-highlight">Particular</li>
               <li>Petrobrás</li>
             </ul>
+            <p class="insurance-note">*Pacientes do plano Petrobrás possuem condições especiais de cobertura. Consulte nossa equipe.</p>
           </div>
         </div>
-        <p class="insurance-note">Consulte sempre a cobertura vigente do seu plano antes do agendamento.</p>
       </div>
     </section>
 
     <section class="locations" id="locais">
       <div class="container">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">Onde atender</p>
+          <p class="eyebrow">Onde e quando posso te atender</p>
           <h2>Locais de atendimento</h2>
+          <p class="section-lead">Toque em "Mostrar mapa" para visualizar a localização de cada clínica sem sair da página.</p>
         </div>
 
-        <div class="location-primary" data-reveal>
-          <div class="location-media">
-            <img src="Lucas-Ac3.jpg" alt="Consultório Edifício CEO" loading="lazy">
-          </div>
-          <div class="location-body">
-            <span class="location-tag">Geriatria</span>
-            <h3>Edifício CEO</h3>
-            <p class="location-address">
-              Av. Tancredo Neves, 2539 — Caminho das Árvores, Salvador &ndash; BA<br>
-              Torre Londres, 13&ordm; andar, Sala 1309<br>
-              CEP 41820-021
-            </p>
-            <a class="btn btn-ghost btn-sm" href="https://maps.app.goo.gl/seFH9sK387vsYTWi8?g_st=ac" target="_blank" rel="noopener">
-              Ver no mapa
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
+        <div class="locations-grid">
 
-        <div class="location-secondary-grid">
-          <article class="location-card" data-reveal>
-            <span class="location-tag location-tag--alt">Dor &amp; Acupuntura</span>
-            <h3>SALVA&rsquo;dor &ndash; Clínica de Traumatologia</h3>
-            <p>Endereço e horários disponíveis na confirmação do agendamento.</p>
-            <a class="location-link" data-whatsapp-cta target="_blank" rel="noopener">Consultar endereço</a>
+          <article class="location-card" data-reveal data-location-id="ceo">
+            <div class="location-body">
+              <span class="location-tag">Geriatria</span>
+              <h3>Edifício CEO</h3>
+              <p class="location-address">
+                <svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s7-7.58 7-12.5A7 7 0 0 0 5 9.5C5 14.42 12 22 12 22Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.3" stroke="currentColor" stroke-width="1.6"/></svg>
+                Av. Tancredo Neves, 2539 — Caminho das Árvores, Salvador &ndash; BA<br>
+                Torre Londres, 13&ordm; andar, Sala 1309 &middot; CEP 41820-021
+              </p>
+              <ul class="location-hours">
+                <li>
+                  <svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Segunda a sexta &middot; 08h às 18h
+                </li>
+              </ul>
+              <div class="location-actions">
+                <a href="https://wa.me/5571900000000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Lucas%20Moreira." class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                  Agendar
+                </a>
+                <button type="button" class="btn btn-ghost btn-sm" data-map-toggle aria-expanded="false" data-map-src="https://www.google.com/maps?q=Av.+Tancredo+Neves+2539+Caminho+das+%C3%81rvores+Salvador+BA+41820-021&output=embed">
+                  Mostrar mapa
+                </button> 
+              </div>
+              <p class="insurance-warning">
+      Atenção: Confirme a vigência do plano diretamente com a clínica antes do agendamento.
+    </p>
+            </div>
           </article>
 
-          <article class="location-card" data-reveal>
-            <span class="location-tag location-tag--alt">Dor &amp; Acupuntura</span>
-            <h3>Torre do Parque &ndash; Viterbo</h3>
-            <p>Endereço e horários disponíveis na confirmação do agendamento.</p>
-            <a class="location-link" data-whatsapp-cta target="_blank" rel="noopener">Consultar endereço</a>
+          <article class="location-card" data-reveal data-location-id="salvador">
+            
+            <div class="location-body">
+              <span class="location-tag location-tag--alt">Dor &amp; Acupuntura</span>
+              <h3>SALVA&rsquo;dor &ndash; Clínica de Tratamento da Dor</h3>
+              <p class="location-address">
+                <svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s7-7.58 7-12.5A7 7 0 0 0 5 9.5C5 14.42 12 22 12 22Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.3" stroke="currentColor" stroke-width="1.6"/></svg>
+                Avenida Anita Garibaldi, 1815 &middot; Federação
+              </p>
+              <ul class="location-hours">
+                <li>
+                  <svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Terça &middot; 14h às 17h <br> Sexta &middot; 08h às 12h
+                </li>
+              </ul>
+              <div class="location-actions">
+                <a href="https://wa.me/5571900000000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Lucas%20Moreira." class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                  Confira seu Plano
+                </a>
+                <button type="button" class="btn btn-ghost btn-sm" data-map-toggle aria-expanded="false" data-map-src="https://www.google.com/maps?q=SALVA%27dor+Cl%C3%ADnica+de+Traumatologia+Ondina+Salvador+BA&output=embed">
+                  Mostrar mapa
+                </button>
+              </div>
+              <div class="location-map" data-map-container hidden></div>
+              <p class="insurance-warning">
+      Atenção: Confirme a vigência do plano diretamente com a clínica antes do agendamento.
+    </p>
+            </div>
+          </article>
+
+          <article class="location-card" data-reveal data-location-id="viterbo">
+            
+            <div class="location-body">
+              <span class="location-tag location-tag--alt">Dor &amp; Acupuntura</span>
+              <h3>Torre do Parque &ndash; Viterbo</h3>
+              <p class="location-address">
+                <svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s7-7.58 7-12.5A7 7 0 0 0 5 9.5C5 14.42 12 22 12 22Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.3" stroke="currentColor" stroke-width="1.6"/></svg>
+                Caminho das Árvores, Salvador &ndash; BA &middot; 
+              </p>
+              <ul class="location-hours">
+                <li>
+                  <svg class="icon-inline" width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Segunda e quarta &middot; 09h às 13h
+                </li>
+              </ul>
+              <div class="location-actions">
+                <a href="https://wa.me/5571900000000?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Lucas Moreira%20na%20Torre%20do%20Parque." class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                  Confia seu Plano
+                </a>
+                <button type="button" class="btn btn-ghost btn-sm" data-map-toggle aria-expanded="false" data-map-src="https://www.google.com/maps?q=Torre+do+Parque+Viterbo+Caminho+das+%C3%81rvores+Salvador+BA&output=embed">
+                  Mostrar mapa
+                </button>
+              </div>
+              <div class="location-map" data-map-container hidden></div>
+              <p class="insurance-warning">
+      Atenção: Confirme a vigência do plano diretamente com a clínica antes do agendamento.
+    </p>
+            </div>
           </article>
         </div>
       </div>
@@ -290,8 +568,8 @@
 
     <section class="cta-band">
       <div class="container cta-band-inner" data-reveal>
-        <h2>Cuide da sua saúde em cada fase da vida.</h2>
-        <a class="btn btn-primary" data-whatsapp-cta target="_blank" rel="noopener">Agendar Consulta</a>
+        <h2>Cuidando da sua saúde em cada fase da vida.</h2>
+        <a href="#locais" class="btn btn-primary" >Agendar Consulta</a>
       </div>
     </section>
 
@@ -302,13 +580,15 @@
       <div class="footer-brand">
         <p class="footer-name">Dr. Lucas Moreira</p>
         <p class="footer-desc">Geriatria, Dor e Acupuntura &mdash; cuidado integrado em Salvador, BA.</p>
-        <p class="footer-credentials">CRM-BA 23629 &middot; RQE Geriatria 18089 &middot; RQE Acupuntura 22702</p>
+        <p class="footer-credentials">CRM-BA: 23629 &middot; RQE Geriatria 18089 &middot; RQE Acupuntura 22702</p>
       </div>
 
       <nav class="footer-links" aria-label="Links do rodapé">
         <p class="footer-heading">Navegação</p>
         <ul>
-          <li><a href="#especialidades">Especialidades</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#procedimentos">Procedimentos</a></li>
+          <li><a href="#galeria">Galeria</a></li>
           <li><a href="#depoimentos">Depoimentos</a></li>
           <li><a href="#convenios">Convênios</a></li>
           <li><a href="#locais">Locais</a></li>
@@ -323,11 +603,21 @@
     </div>
 
     <div class="container footer-bottom">
-      <p>&copy; <span id="anoAtual"></span> Dr. Lucas Moreira. Todos os direitos reservados.</p>
-      <p class="footer-legal">CRM-BA 23629 &mdash; Desenvolvido por &lt;Dev&gt;Rafilsk.</p>
+      <p>&copy; <span id="anoAtual"></span> Dr. Lucas Moreira &mdash; CRM-BA 23629 &mdash; Todos os direitos reservados.</p>
+      <p class="footer-legal">  Desenvolvido por &lt;Dev&gt;Rafilsk.</p>
     </div>
   </footer>
 
   <script src="script.js" defer></script>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 </body>
 </html>
