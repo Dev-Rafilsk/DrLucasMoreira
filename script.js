@@ -84,8 +84,19 @@
 
   function openDialog(dialog) {
     if (!dialog || dialog.open) return;
+    
+    // Captura a posição atual da tela antes de abrir o modal
+    const currentScroll = window.scrollY;
+    
     dialog.showModal();
-    requestAnimationFrame(() => dialog.classList.add('is-visible'));
+    
+    // Restaura imediatamente a posição para evitar que o celular jogue a tela para o topo
+    window.scrollTo(0, currentScroll);
+    
+    requestAnimationFrame(() => {
+      dialog.classList.add('is-visible');
+      window.scrollTo(0, currentScroll);
+    });
   }
 
   function closeDialog(dialog) {
