@@ -1,15 +1,6 @@
 (() => {
   'use strict';
-  const CONFIG = {
-    whatsappNumber: '5571900000000',
-    whatsappMessage: 'Olá, Dr. Lucas! Gostaria de agendar uma consulta.',
-  };
-  function setupWhatsappLinks() {
-    const url = `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(CONFIG.whatsappMessage)}`;
-    document.querySelectorAll('[data-whatsapp-cta]').forEach((el) => {
-      el.setAttribute('href', url);
-    });
-  }
+
   function setupMobileNav() {
     const toggle = document.getElementById('navToggle');
     const nav = document.getElementById('mainNav');
@@ -32,6 +23,7 @@
       if (e.key === 'Escape') closeNav();
     });
   }
+
   function setupHeaderScroll() {
     const header = document.querySelector('.site-header');
     if (!header) return;
@@ -42,6 +34,7 @@
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
   }
+
   function setupScrollReveal() {
     const items = document.querySelectorAll('[data-reveal]');
     if (!items.length) return;
@@ -83,21 +76,21 @@
     prevBtn.addEventListener('click', () => scrollByCard(-1));
     nextBtn.addEventListener('click', () => scrollByCard(1));
   }
+
   function setupFooterYear() {
     const yearEl = document.getElementById('anoAtual');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
+
   function openDialog(dialog) {
     if (!dialog || dialog.open) return;
     dialog.showModal();
-    document.body.classList.add('modal-open');
     requestAnimationFrame(() => dialog.classList.add('is-visible'));
   }
 
   function closeDialog(dialog) {
     if (!dialog || !dialog.open) return;
     dialog.classList.remove('is-visible');
-    document.body.classList.remove('modal-open');
 
     const finish = () => {
       dialog.removeEventListener('transitionend', finish);
@@ -125,6 +118,7 @@
       btn.addEventListener('click', () => closeDialog(dialog));
     });
   }
+
   function setupProcedureModals() {
     const triggers = document.querySelectorAll('[data-modal-target]');
     const modals = document.querySelectorAll('dialog.procedure-modal');
@@ -198,6 +192,7 @@
 
     bindDialogDismiss(lightbox);
   }
+
   function setupLocationMaps() {
     document.querySelectorAll('[data-map-toggle]').forEach((button) => {
       const card = button.closest('.location-card');
@@ -231,8 +226,8 @@
       });
     });
   }
+
   document.addEventListener('DOMContentLoaded', () => {
-    setupWhatsappLinks();
     setupMobileNav();
     setupHeaderScroll();
     setupScrollReveal();
