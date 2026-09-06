@@ -426,19 +426,61 @@ h3 { font-size: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem); font-weight: 500; }
   transform: scale(1.05);
 }
 
-.gallery-item img {
+.gallery { padding-block: var(--space-xl); }
+
+.gallery-viewport { position: relative; overflow: hidden; }
+
+.gallery-track {
+  display: flex;
+  gap: var(--space-sm);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--space-sm);
+  scrollbar-width: none;
+}
+.gallery-track::-webkit-scrollbar { display: none; }
+
+.gallery-card {
+  scroll-snap-align: start;
+  flex: 0 0 min(300px, 80vw);
+  aspect-ratio: 4 / 3;
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  cursor: pointer;
+  background: var(--bg-elevated-2);
+}
+
+.gallery-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 20% !important; 
-  transition: transform 0.5s var(--ease);
+  object-position: 50% 25%;
+  transition: transform 0.6s var(--ease);
 }
-.gallery-grid .gallery-item:nth-child(1) img { object-position: 50% 25%; }
-.gallery-grid .gallery-item:nth-child(2) img { object-position: 50% 20%; }
-.gallery-grid .gallery-item:nth-child(3) img { object-position: 50% 15%; }
-.gallery-grid .gallery-item:nth-child(4) img { object-position: 50% 25%; }
-.gallery-grid .gallery-item:nth-child(5) img { object-position: 50% 25%; }
-.gallery-grid .gallery-item:nth-child(6) img { object-position: 50% 20%; }
+
+.gallery-card:hover img { transform: scale(1.06); }
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(16, 21, 27, 0) 45%, rgba(16, 21, 27, 0.78) 100%);
+  color: var(--text);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.gallery-overlay svg {
+  border: 1px solid rgba(244, 240, 234, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+  background: rgba(16, 21, 27, 0.4);
+  backdrop-filter: blur(6px);
+}
+.gallery-card:hover .gallery-overlay { opacity: 1; }
 
 .location-media img {
   object-fit: cover;
@@ -1029,8 +1071,6 @@ dialog.procedure-modal, dialog.lightbox {
 }
 
 dialog.procedure-modal {
-  position: fixed;
-  inset: 0;
   width: min(560px, 92vw);
   max-height: 85vh;
   overflow-y: auto;
@@ -1043,16 +1083,6 @@ dialog.procedure-modal {
   box-shadow: var(--shadow-lg);
   opacity: 0;
   transform: translateY(18px) scale(0.97);
-  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
-}
-dialog.lightbox {
-  position: fixed;
-  inset: 0;
-  margin: auto;
-  width: min(960px, 94vw);
-  max-height: 92vh;
-  opacity: 0;
-  transform: scale(0.96);
   transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
 }
 dialog.procedure-modal.is-visible { 
@@ -1140,62 +1170,8 @@ dialog.procedure-modal h3 {
   padding-top: var(--space-sm);
   margin-bottom: var(--space-md);
 }
-.gallery { padding-block: var(--space-xl); }
-
-.gallery-grid {
-  display: grid;
-  gap: var(--space-sm);
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 160px;
-  grid-auto-flow: dense;
-}
-@media (min-width: 640px) {
-  .gallery-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 200px; }
-}
-@media (min-width: 1000px) {
-  .gallery-grid { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px; }
-}
-
-.gallery-item {
-  position: relative;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid var(--border-soft);
-  cursor: pointer;
-}
-.gallery-item img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-  transition: transform 0.6s var(--ease); 
-}
-.gallery-item:hover img, .gallery-item:focus-visible img { transform: scale(1.06); }
-
-.gallery-item--wide { grid-column: span 2; }
-.gallery-item--tall { grid-row: span 2; }
-
-.gallery-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(180deg, rgba(16, 21, 27, 0) 45%, rgba(16, 21, 27, 0.78) 100%);
-  color: var(--text);
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-.gallery-overlay svg {
-  border: 1px solid rgba(244, 240, 234, 0.5);
-  border-radius: 50%;
-  padding: 10px;
-  background: rgba(16, 21, 27, 0.4);
-  backdrop-filter: blur(6px);
-}
-.gallery-item:hover .gallery-overlay, .gallery-item:focus-visible .gallery-overlay { opacity: 1; }
 
 dialog.lightbox {
-  position: relative;
   width: min(960px, 94vw);
   max-height: 92vh;
   opacity: 0;
@@ -1275,14 +1251,10 @@ dialog.lightbox.is-visible::backdrop { opacity: 1; }
   display: inline-block; 
 }
 
-body.modal-open { 
-  overflow: hidden; 
-}
-
 @media (prefers-reduced-motion: reduce) {
   dialog.procedure-modal, dialog.lightbox,
   dialog.procedure-modal::backdrop, dialog.lightbox::backdrop,
-  .gallery-item img, .location-map {
+  .gallery-card img, .location-map {
     transition: none;
     animation: none;
   }
