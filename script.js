@@ -135,7 +135,7 @@
   }
 
   function setupGalleryLightbox() {
-    const items = Array.from(document.querySelectorAll('.gallery-item'));
+    const items = Array.from(document.querySelectorAll('.gallery-card'));
     const lightbox = document.getElementById('lightbox');
     if (!items.length || !lightbox) return;
 
@@ -193,6 +193,36 @@
     bindDialogDismiss(lightbox);
   }
 
+  function setupGalleryAutoplay() {
+    const track = document.getElementById('galleryTrack');
+    if (!track) return;
+
+    let autoplayTimer = null;
+    const intervalTime = 1500;
+
+    const startAutoplay = () => {
+      autoplayTimer = setInterval(() => {
+        const card = track.querySelector('.gallery-card');
+        if (!card) return;
+        const gap = parseFloat(getComputedStyle(track).gap) || 16;
+        const scrollAmount = card.getBoundingClientRect().width + gap;
+
+        if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 10) {
+          track.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+      }, intervalTime);
+    };
+
+    const stopAutoplay = () => clearInterval(autoplayTimer);
+
+    startAutoplay();
+
+    track.addEventListener('mouseenter', stopAutoplay);
+    track.addEventListener('mouseleave', startAutoplay);
+  }
+
   function setupLocationMaps() {
     document.querySelectorAll('[data-map-toggle]').forEach((button) => {
       const card = button.closest('.location-card');
@@ -235,6 +265,7 @@
     setupFooterYear();
     setupProcedureModals();
     setupGalleryLightbox();
+    setupGalleryAutoplay();
     setupLocationMaps();
   });
 })();
